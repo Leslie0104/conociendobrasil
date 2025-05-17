@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conociendo Brasil y su Cultura</title>
+    <link rel="stylesheet" href="css/estilos.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo de Brasil">
+      </div>
+      
+      <nav>
+        <ul id="menu">
+          <li><a href="#">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#servicios" class="dropdown-toggle">Rincones de Brasil</a>
+            <div class="dropdown-content">
+                <a href="#servicio1">Rio de Janeiro</a>
+                <a href="#servicio2">Sao Paulo</a>
+                <a href="#servicio3">Brasilia</a>
+            </div>
+          </li>
+          <li><a href="#">Cultura</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li>
+            <div class="idioma">
+              <select id="idioma-select" name="idioma" onChange="changeLenguage( this.value )">
+                <option value="es">Español</option>
+                <option value="en">Inglés</option>
+              </select>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Banner Principal-->
+    <main>
+        <section class="banner">
+            <div class="banner-content" id="banner-content">
+                <h1>Sumérgete en la cultura vibrante de Brasil</h1>
+                <p>Bienvenido a nuestro portal dedicado a explorar la belleza y diversidad de Brasil. Desde las playas
+                    doradas de Río de Janeiro hasta la selva amazónica llena de vida, aquí descubrirás todo lo que este
+                    país fascinante tiene para ofrecer.</p>
+                <p>Acompáñanos en un viaje por su música, gastronomía, tradiciones y paisajes que cautivan los sentidos.
+                </p>
+                <p>¡Empieza tu aventura y vive la magia de Brasil!</p>
+            </div>
+        </section>
+
+        <section>
+            <!--Slide Show -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <img src="images/imagen_slide_2.jpg" style="width:100%">
+                    <div class="text">Brasil desde las alturas.</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="images/imagen_slide_3.jpg" style="width:100%">
+                    <div class="text">Atardecer de ensueño en Brasil.</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="images/imagen_slide_4.jpg" style="width:100%">
+                    <div class="text">Pan de Azúcar: la cima de Río.</div>
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </section>
+
+        <div class="caja-texto" id="caja-texto">
+            <h3>SIENTE LA CULTURA BRASILEÑA</h3>
+        </div>
+
+        <div id="caja-texto-2">
+          <h2>Brasil, donde tu aventura cobra vida.</h2>
+          <p>Explora la magia de Brasil a través de su gastronomía, sus deslumbrantes desfiles y su música vibrante.
+            Déjate envolver por los sabores, colores y ritmos que hacen de este país un destino único. </p>
+          <p>¡Tu aventura comienza aquí!</p>
+        </div>
+
+        <section class="destacados">
+            <div class="tarjetas">
+                <div class="tarjeta">
+                    <img src="images/Feijoada.png" alt="Gastronomía">
+                    <a href="#" class="btn">Gastronomía</a>
+                </div>
+                <div class="tarjeta">
+                    <img src="images/Desfiles 2.jpg" alt="Desfiles">
+                    <a href="#" class="btn">Desfiles</a>
+                </div>
+                <div class="tarjeta">
+                    <img src="images/Musica 2.jpg" alt="Música">
+                    <a href="#" class="btn">Música</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer-->
+    <footer>
+        <div class="footer-links" id="footer-links">
+            <h4>Enlaces Rápidos</h4>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Cultura</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="redes-sociales" id="redes-sociales">
+            <h4>Redes Sociales</h4>
+            <ul>
+                <li><a href="#"><img src="images/Facebook.png" alt="Facebook"></a>Facebook</li>
+                <li><a href="#"><img src="images/Instagram.png" alt="Instagram"></a>Instagram</li>
+                <li><a href="#"><img src="images/WhatsApp.png" alt="WhatsApp"></a>WhatsApp</li>
+            </ul>
+        </div>
+
+        <div class="contacto" id="contacto">
+            <h4>Contacto</h4>
+            <ul>
+                <li><a href="#"><img src="images/email.png" alt="Email"></a>Email: info@conocebrasil.com</li>
+                <li><a href="#"><img src="images/telefono.png" alt="Teléfono"></a>Teléfono: +52 143 257 689</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/codigo.js"></script>
+
+</body>
+
+<div id="mensaje-bienvenida">
+    <span id="texto-bienvenida"></span>
+    <button id="cerrar-mensaje">&times;</button>
+</div>
+
+
+</html>

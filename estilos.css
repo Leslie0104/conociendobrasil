@@ -1,0 +1,510 @@
+/* estilos Generales */
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #0a4d52;
+    background-color: #d1f3f4;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+a:hover{
+    color: #18e66d;
+}
+
+/* Encabezado */ 
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0a4d52;
+    color: #fff;
+    padding: 20px;
+}
+
+.logo img {
+    height: 80px; 
+    width: 80px; 
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul li {
+    display: inline-block;
+
+}
+
+/* Selector de idioma */
+
+.idioma{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.idioma select {
+    border: none;
+    border-radius: 15px;
+    background: #18e66d;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: rgb(0, 0, 0);
+
+}
+
+/* Texto y Títulos*/
+
+h1 {
+    color: #080808;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0 25px;
+    padding: 0 100px;
+    text-align: left;
+    align-items: center;
+}
+
+h2 {
+    color: #080808;
+    margin-bottom: 30px;
+    margin-top: 200px;
+    text-align: center;
+    font-size: 30px;
+}
+
+p{
+    color: #080808;
+    text-align: center;
+    font-size: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+
+}
+
+/* Estilos específicos para el Dropdown */
+.dropdown {
+    /* Hace que el contenido absoluto se posicione relativo a este elemento */
+    position: relative; 
+    display: inline-block; /* Para que el li se comporte como un elemento en línea dentro del flexbox */
+}
+
+.dropdown-content {
+    /* Oculto por defecto */
+    display: none; 
+    
+    /* Posicionamiento absoluto */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px; /* Ancho mínimo del dropdown */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1; /* Asegura que esté por encima de otros elementos */
+    top: 100%; /* Posiciona el dropdown justo debajo del item padre */
+    left: 0; /* Alinea el borde izquierdo con el padre. Puedes usar 'right: 0;' para alinearlo a la derecha */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block; /* Para que cada enlace del dropdown ocupe su propia línea y sea clickeable */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Mostrar el contenido del dropdown cuando se hace hover sobre el item padre */
+.dropdown:hover .dropdown-content {
+    display: block; 
+}
+
+/* Caja de texto destacada */
+.caja-texto {
+    text-align: center;
+    padding: 20px;
+    background-color: #3db368;
+    font-size: 18px;
+    border-radius: 20px;
+    margin: 30px auto;
+    width: fit-content;
+    color: #113d2e;
+    font-weight: bold;
+  }
+
+/* Banner principal */
+.banner {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background-image: url('../images/cristo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 830px;
+    display: flex;
+    margin: 20px;
+}
+
+.banner-content {
+    background-color:rgba(255, 255, 255, 0.532) ;
+    padding: 0%;
+    width: 40%;
+    border-radius: 10px;
+    color: black;
+    text-align: left;
+    margin-left: 8%;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    margin-right: 8%;
+}
+
+.banner-content h1 {
+    margin: 12% 0 8%;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.banner-content p{
+    margin-top: 2%;
+    font-size: 20px;
+    text-align:center;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  /*Coloque el botón "siguiente" a la derecha */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* Al pasar el cursor, agregue un color de fondo negro con un poco de transparencia. */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 25px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Number text (1/3 etc) 
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }*/
+  
+  /* Los puntos/viñetas/indicadores */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Animación de desvanecimiento */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+/* Sección de Destacados */
+.destacados {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+.tarjeta {
+    background-color:rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta:hover{
+    transform: scale(1.05);
+}
+
+.tarjeta img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.tarjeta .btn{
+    display: inline-block;
+    background-color: #18e66d;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.tarjeta .btn:hover{
+    background-color: #0a4d52;
+}
+
+/* Footer */
+footer {
+    background-color: #0a4d52;
+    color: #ffffff;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: left;
+    gap: 30px;
+  }
+  
+  footer h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ffffff;
+  }
+  
+  footer ul {
+    list-style: none;
+  }
+  
+  footer ul li {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+  }
+  
+  footer .redes-sociales a img,
+  footer .contacto a img {
+    width: 25px;
+    transition: transform 0.3s ease;
+  }
+  
+  footer .redes-sociales a img:hover,
+  footer .contacto a img:hover {
+    transform: scale(1.2);
+  }
+
+/* Media Queries para diferentes tamaños*/
+
+/*Para pantallas pequeñas (moviles, menos de 600px)*/
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    header nav ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .idioma{
+        position: static;
+        margin: 10px auto;
+    }
+
+    .banner-content {
+        width: 100%;
+        margin: 5%;
+        padding: 15px;
+    }
+
+    .banner-content h1 {
+        width: 80%;
+        margin: 5%;
+        padding: 10px;
+        height: 70px;
+    }
+
+    .banner-content p {
+        width: 80%;
+        margin: 6%;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-top: 100px;
+    }
+
+    p {
+        font-size: 20px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .destacados {
+        padding-inline: 0;
+    }
+
+    .tarjetas {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .tarjeta {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer ul {
+        padding: auto;
+    }
+
+    .footer-links h4, .redes-sociales h4, .contacto h4  {
+        text-align: center;
+    }
+
+    .footer-links a, .redes-sociales a, .contacto a {
+        margin-inline: auto;
+    }
+}
+
+/* Para tablets (pantallas entre 600px y 1024px) */
+@media screen and (max-width: 1024px) {
+    .banner {
+        height: 600px;
+    }
+
+    .banner-content {
+        width: 100%;
+        margin: 5%;
+        padding: 15px;
+    }
+   
+    .banner-content p {
+        width: 90%;
+        margin:  10px 0;
+        padding: 10px;
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+    .tarjetas {
+        justify-content: space-around;
+    }
+}
+
+/*Mensaje de Bienvenida*/
+#mensaje-bienvenida 
+{
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #2b2929, #4e4a4a);
+    color: white;
+    padding: 1em 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.3em;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    animation: fadeInDown 0.5s ease-out;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+  
+  #cerrar-mensaje {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  #cerrar-mensaje:hover {
+    color: #e4c254;
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      transform: translate(-50%, -100%);
+      opacity: 0;
+    }
+    to {
+      transform: translate(-50%, 0);
+      opacity:1;
+    }
+}
